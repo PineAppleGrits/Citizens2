@@ -6,6 +6,7 @@ import java.net.Socket;
 import java.util.List;
 import java.util.Map;
 
+import com.github.puregero.multilib.MultiLib;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_19_R2.CraftServer;
@@ -108,6 +109,7 @@ public class EntityHumanNPC extends ServerPlayer implements NPCHolder, Skinnable
         } else {
             skinTracker = null;
         }
+        MultiLib.setEntityAsFake(this.getBukkitEntity());
     }
 
     @Override

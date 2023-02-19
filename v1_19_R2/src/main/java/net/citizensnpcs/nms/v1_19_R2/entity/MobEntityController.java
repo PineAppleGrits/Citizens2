@@ -4,7 +4,6 @@ import java.lang.reflect.Constructor;
 import java.util.Map;
 import java.util.WeakHashMap;
 
-import com.github.puregero.multilib.MultiLib;
 import org.bukkit.Location;
 import org.bukkit.block.BlockFace;
 import org.bukkit.craftbukkit.v1_19_R2.CraftWorld;
@@ -32,7 +31,7 @@ public abstract class MobEntityController extends AbstractEntityController {
         EntityType<?> type = NMSImpl.getEntityType(clazz);
         net.minecraft.world.entity.Entity entity = createEntityFromClass(type, ((CraftWorld) at.getWorld()).getHandle(),
                 npc);
-        MultiLib.setEntityAsFake(entity.getBukkitEntity());
+        ReflectionUtils.setEntityAsFake(entity);
         if (entity instanceof Mob) {
             NMSImpl.clearGoals(npc, ((Mob) entity).goalSelector, ((Mob) entity).targetSelector);
         }

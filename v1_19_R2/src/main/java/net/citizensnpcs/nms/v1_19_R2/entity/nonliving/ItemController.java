@@ -1,6 +1,6 @@
 package net.citizensnpcs.nms.v1_19_R2.entity.nonliving;
 
-import com.github.puregero.multilib.MultiLib;
+import net.citizensnpcs.nms.v1_19_R2.entity.ReflectionUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.v1_19_R2.CraftServer;
@@ -54,7 +54,7 @@ public class ItemController extends AbstractEntityController {
         public EntityItemNPC(EntityType<? extends ItemEntity> types, Level level) {
             super(types, level);
             this.npc = null;
-            MultiLib.setEntityAsFake(this.getBukkitEntity());
+            ReflectionUtils.setEntityAsFake(this);
         }
 
         public EntityItemNPC(Level world, NPC npc, double x, double y, double z, ItemStack stack) {

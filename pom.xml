@@ -8,7 +8,7 @@
     <version>2.0.30-MultiPaper-SNAPSHOT</version>
 
     <properties>
-        <BUILD_NUMBER>Unknown</BUILD_NUMBER>
+        <BUILD_NUMBER>1.19.3</BUILD_NUMBER>
         <CITIZENS_VERSION>2.0.30</CITIZENS_VERSION>
     </properties>
 
